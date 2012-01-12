@@ -1,21 +1,15 @@
-<html itemscope itemtype="http://schema.org/Product">
+ <!DOCTYPE html>
+ <html itemscope itemtype="http://schema.org/Product">
   <head>
     <title>
-      PhotoHash
+      Resume Portions
     </title>
-    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.autocomplete.css">
-    <!--[if lt IE 8]>
-      <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-    <![endif]-->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/js/jquery.autocomplete.js"></script> 
     
     <!-- +1 button data -->
-    <meta itemprop="name" content="Photo Hash">
-    <meta itemprop="description" content="Photo Hash uses the Google+ photographer community's themed hash tags to generate desktop backgrounds!">
+    <meta itemprop="name" content="Resume Portions">
+    <meta itemprop="description" content="Orginize your resume!">
     <meta itemprop="image" content="http://photohash.appspot.com/images/PhotoHashG.png">
     
     <script type="text/javascript">
@@ -29,35 +23,37 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <link rel="stylesheet" type="text/css" href="//webputty.commondatastorage.googleapis.com/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiXpjIM.css" />
+<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiXpjIM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>
   </head>
   
   <body>
-    <div class="container" >
-      <div class="span-24 header">
-        <div class="span-10 ">
+      <div id="header">
+        <div>
             <a href='/'>
-            <img src="images/PhotoHash.png" alt="PhotoHash" id="header-image" />
+              <h1>Resume Portions</h1>
+              <!-- <img src="images/PhotoHash.png" alt="PhotoHash" id="header-image" /> -->
             </a>
         </div>
-       
+        <div>
+          {{greeting}}
+          (<a href="{{url}}">{{sign_inout}}</a>)
+        </div>
       </div>
       
-      <div class='content span-24'>
+      <div id='content'>
       {% include content %}
       </div>
-      <div class='clear'><div>
-      <div class="clearfooter"></div>
-      <div class='footer'>
-        <div class="span-24 ">
-            <img src="images/hash.png" alt="Hash Tag" />
-        </div>
-        <div class="span-24 center">
+
+
+      <div id='footer'>
           <p>
             Created by 
-            <a href='https://plus.google.com/111084801246354633245/about'>Amy Ciavolino</a> &copy;2011 | 
-            <a href='http://amyciavolino.com/'>amyciavolino.com</a> |
+            <a href='http://amyciavolino.com'>Amy Ciavolino</a> and
+            <a href='http://userpages.umbc.edu/~markpa1/'>Mark Pallone</a>
+            &copy;2011 |
             <span id='p-onebutton'>
-            <g:plusone href='http://photohash.appspot.com/' size='small'></g:plusone>
+            <g:plusone href='http://resumeportions.appspot.com/' size='small'></g:plusone>
             <script type="text/javascript">
             (function() {
                 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -68,7 +64,5 @@
             </span>
           </p>
         </div>
-      </div>
-    </div>
   </body>
 </html>

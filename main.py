@@ -16,12 +16,34 @@
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
+from google.appengine.api import users
+from google.appengine.ext import db
+import Model
+import os
+from google.appengine.ext.webapp import template
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        lol = self.request.get('lol')
-        self.response.out.write("<html><body>%s</body></html>" % lol)
-    
+        user = users.get_current_user()
+        if user:
+            greeting = "Welcome, %s!" % user.nickname()
+            url = users.create_logout_url("/")
+            action = "Sign out"
+            resume = Model.Resume(key_name=user.user_id(), g_user=user)
+            resume.emails.append(db.Email(user.email()))
+            resume.put()
+        else:
+            greeting = "Log in or Register!"
+            url = users.create_login_url("/")
+            action = "Sign in"
+
+        template_values = {'greeting': greeting,
+                           'url': url,
+                           'sign_inout': action
+                           }
+        path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
+        self.response.out.write(template.render(path, template_values))
+
 
 def main():
     application = webapp.WSGIApplication([('/', MainHandler)],
