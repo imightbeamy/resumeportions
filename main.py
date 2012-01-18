@@ -39,6 +39,7 @@ class MainHandler(webapp.RequestHandler):
 
         template_values = {'greeting': greeting,
                            'url': url,
+                           'content': 'frontpage.html',
                            'sign_inout': action
                            }
         path = os.path.join(os.path.dirname(__file__), 'templates/index.html')

@@ -5,42 +5,51 @@
       Resume Portions
     </title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/js/jquery.autocomplete.js"></script> 
+
+    <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.autocomplete.css">
     
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- +1 button data -->
     <meta itemprop="name" content="Resume Portions">
     <meta itemprop="description" content="Orginize your resume!">
-    <meta itemprop="image" content="http://photohash.appspot.com/images/PhotoHashG.png">
-    
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23809572-4']);
-      _gaq.push(['_trackPageview']);
-    
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <link rel="stylesheet" type="text/css" href="//webputty.commondatastorage.googleapis.com/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiXpjIM.css" />
-<script type="text/javascript">(function(w,d){if(w.location!=w.parent.location||w.location.search.indexOf('__preview_css__')>-1){var t=d.createElement('script');t.type='text/javascript';t.async=true;t.src='http://www.webputty.net/js/agtzfmNzc2ZpZGRsZXIMCxIEUGFnZRiXpjIM';(d.body||d.documentElement).appendChild(t);}})(window,document);</script>
+    <meta itemprop="image" content="http://photohash.appspot.com/images/PhotoHashG.png">  
   </head>
   
   <body>
+    <div id="container">
       <div id="header">
-        <div>
-            <a href='/'>
-              <h1>Resume Portions</h1>
-              <!-- <img src="images/PhotoHash.png" alt="PhotoHash" id="header-image" /> -->
-            </a>
-        </div>
-        <div>
-          {{greeting}}
-          (<a href="{{url}}">{{sign_inout}}</a>)
+         <h1>
+           <a href='/'>R&eacute;sum&eacute; Portions</a> 
+         </h1>
+         <div>
+           <p id="user"> 
+              {{greeting}}
+           </p>
+           <p>
+             (<a href="{{url}}">{{sign_inout}}</a>)
+           </p>
         </div>
       </div>
-      
+
+      <div id='nav'>
+        <ol>
+          <li>
+            <a href="/resume">R&eacute;sum&eacute;</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/tips">Tips</a>
+          </li>
+          <li>
+            <a href="/donate">Donate</a>
+          </li>
+        </ol>
+      </div>
+
       <div id='content'>
       {% include content %}
       </div>
@@ -53,16 +62,17 @@
             <a href='http://userpages.umbc.edu/~markpa1/'>Mark Pallone</a>
             &copy;2011 |
             <span id='p-onebutton'>
-            <g:plusone href='http://resumeportions.appspot.com/' size='small'></g:plusone>
-            <script type="text/javascript">
-            (function() {
+              <g:plusone href='http://resumeportions.appspot.com/' size='small'></g:plusone>
+              <script type="text/javascript">
+              (function() {
                 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
                 po.src = 'https://apis.google.com/js/plusone.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
               })();
-            </script>
+              </script>
             </span>
           </p>
         </div>
+      </div>
   </body>
 </html>

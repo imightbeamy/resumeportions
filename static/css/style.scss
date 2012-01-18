@@ -1,0 +1,93 @@
+$light: #66C0E7;
+$dark: #18759D;
+$text: #031218;
+$background: #82662B;
+$background-light: #FFF;
+$link-color: #9D3318;
+
+$standard-padding: 10px;
+
+a {
+  color: $link-color;
+}
+
+body {
+  background-color: $background;
+  //background-image: url('/images/wood.png');
+}
+
+#container {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+  width: 880px;
+  background-color: $background-light;
+  -webkit-box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+  -webkit-border-radius: 5px;
+ }
+
+
+h1 {
+  font-family:"Courier New", Courier, monospace;
+  font-size: 50px;
+}
+
+#header {
+  height: 60px;
+  padding: $standard-padding;
+  a {
+    color: $light;
+  }
+  div {
+    float: right;
+    text-align: right;
+  }
+  p {
+    margin: 0px;
+  }
+  h1 {
+    clear: none;
+    float: left;
+    margin: 0px;
+    a { 
+      text-decoration: none;
+    }
+    a:hover {
+    font-weight: bold;
+    }
+  }
+}
+
+#nav {
+  border-bottom: 3px solid rgba($link-color, 0.1);
+  font-size: 18px;
+  padding: $standard-padding;
+  a {
+    text-decoration: none;
+  }
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+  }
+  ol {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+#content {
+  min-height: 200px;
+  padding: $standard-padding;
+  background-image: url('/images/line.png');
+}
+
+#footer {
+  padding: $standard-padding;
+  text-align: center;
+}
+
+#p-onebutton {
+  position: absolute;
+  padding-left: 5px;
+}

@@ -22,7 +22,7 @@ class Title(db.Model):
   experiences = db.ListProperty(db.Key)
     
 
-#Key for a Resume is the key of the user it belongs to
+#Key for a Resume is the openID of the user it belongs to
 class Resume(db.Model):
   phones = db.ListProperty(db.PhoneNumber)
   address = db.ListProperty(db.PostalAddress)
